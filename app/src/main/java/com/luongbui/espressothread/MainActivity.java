@@ -14,8 +14,8 @@ import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
-  private static final String ASYNCTASK_LABEL = "AsyncTask";
-  private static final String THREAD_LABEL = "Thread";
+  private static final String ASYNCTASK_LABEL = "Launched with AsyncTask";
+  private static final String THREAD_LABEL = "Launched with Thread";
   private static final long WAIT_TIME = 1000;
 
   private ExecutorService executor;
