@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import java.lang.ref.WeakReference;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    executor = Executors.newCachedThreadPool();
+    executor = ExecutorFactory.getInstance().getCachedThreadPoolExecutor();
 
     asyncTaskButton = (Button) findViewById(R.id.async_task_button);
     asyncTaskButton.setOnClickListener(new View.OnClickListener() {
