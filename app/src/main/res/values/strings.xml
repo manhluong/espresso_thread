@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">Espresso Thread</string>
+  <string name="async_task">Async Task</string>
+  <string name="thread">Thread</string>
+</resources>
