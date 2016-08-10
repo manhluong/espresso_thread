@@ -42,7 +42,7 @@ public class SuccessTestCase {
   private IdlingResource idlingResource;
 
   @Before
-  public void registerIntentServiceIdlingResource() {
+  public void setUp() {
     idlingResource = new ThreadIdlingResourceMonitor(
         ExecutorFactory.getInstance().getCachedThreadPoolExecutor());
     Espresso.registerIdlingResources(idlingResource);
@@ -64,7 +64,7 @@ public class SuccessTestCase {
   }
 
   @After
-  public void unregisterIntentServiceIdlingResource() {
+  public void tearDown() {
     Espresso.unregisterIdlingResources(idlingResource);
   }
 }
