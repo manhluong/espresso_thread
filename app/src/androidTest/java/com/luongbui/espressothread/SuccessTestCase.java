@@ -60,7 +60,7 @@ public class SuccessTestCase {
 
     // Press the thread button and check.
     onView(withText("Thread")).perform(click());
-    onView(withText("Launched with Thread")).check(matches(notNullValue()));
+    onView(withText("Launched with Thread: 2000")).check(matches(notNullValue()));
   }
 
   @After

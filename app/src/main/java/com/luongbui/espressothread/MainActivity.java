@@ -67,7 +67,23 @@ public class MainActivity extends AppCompatActivity {
             new Handler(Looper.getMainLooper()).post(new Runnable() {
               @Override
               public void run() {
-                launchActivity(THREAD_LABEL);
+                launchActivity(THREAD_LABEL + ": " + WAIT_TIME);
+              }
+            });
+          }
+        });
+
+        executor.execute(new Runnable() {
+          @Override public void run() {
+            try {
+              Thread.sleep(WAIT_TIME * 2);
+            } catch (InterruptedException e) {
+              e.printStackTrace();
+            }
+            new Handler(Looper.getMainLooper()).post(new Runnable() {
+              @Override
+              public void run() {
+                launchActivity(THREAD_LABEL + ": " + WAIT_TIME * 2);
               }
             });
           }
